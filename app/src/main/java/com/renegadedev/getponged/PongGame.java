@@ -228,6 +228,7 @@ class PongGame extends SurfaceView implements Runnable {
 
             if(mLives == 0) {
                 mPaused = true;
+                startNewGame();
             }
         }
 
