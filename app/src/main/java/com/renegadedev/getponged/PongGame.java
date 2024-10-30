@@ -223,6 +223,9 @@ class PongGame extends SurfaceView implements Runnable {
         if(mBall.getRect().bottom > mScreenY) {
             mLives = mLives - 1;
             mSP.play(mMissID, 5, 5, 0,0, 1);
+            // After ball passes the bottom
+            // ball will reset back to its starting position
+            // waiting for touchEvent to start again
             mBall.reset(mScreenX, mScreenY);
             mPaused = true;
 
